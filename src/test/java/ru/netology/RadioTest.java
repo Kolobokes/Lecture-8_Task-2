@@ -17,8 +17,8 @@ class RadioTest {
 
     @Test
     void nextStationOverseasList() {
-        Radio radio = new Radio();
-        radio.setStationNumber(9);
+        Radio radio = new Radio(10);
+        radio.setStationNumber(10);
         radio.nextStation();
         int expected = 0;
         assertEquals(expected, radio.getStationNumber());
@@ -35,10 +35,10 @@ class RadioTest {
 
     @Test
     void prevStationOverseasList() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setStationNumber(0);
         radio.prevStation();
-        int expected = 9;
+        int expected = 10;
         assertEquals(expected, radio.getStationNumber());
     }
 
@@ -70,9 +70,9 @@ class RadioTest {
     @Test
     void increaseVolumeOverseasList() {
         Radio radio = new Radio();
-        radio.setVolume(15);
+        radio.setVolume(100);
         radio.increaseVolume();
-        int expected = 15;
+        int expected = 100;
         assertEquals(expected, radio.getVolume());
     }
 
