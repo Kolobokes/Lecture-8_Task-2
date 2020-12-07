@@ -14,6 +14,7 @@ public class Radio {
     public Radio(
             int amountRadioStation
     ){
+        this.amountRadioStation = amountRadioStation;
     };
 
     public void nextStation(){
